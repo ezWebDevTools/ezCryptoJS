@@ -34,13 +34,30 @@ h1{
 
 h2{
     margin:0 0 10px 0;
-    padding: 5px 0;
-    font-weight: 300
+    padding: 5px 0 5px 10px;
+    font-weight: 300;
+    text-align:left
+}
+
+h2:before{
+    content: '- ';
 }
 input[type='text'], input[type='password'], textarea {
     border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
+}
+
+#pplaintext, #padata{
+    border-color: #ee1111
+}
+
+#pplaintext h2, #padata h2{
+    background-color: #ee1111
+}
+
+#ppassword h2{
+    background-color: #00a300
 }
 
 
@@ -49,7 +66,7 @@ input[type='text'], input[type='password'], textarea {
 }
 
 #pciphertext h2{
-    background-color: #132BD2
+    background-color: #2d89ef
 }
 
 
@@ -79,7 +96,7 @@ input[type='text'], input[type='password'], textarea {
 
 .box{
     border-radius:0;
-    border-width:  1px 0 0 0;
+    border-width: 0;
     padding:5px 0 5px 0;
     margin-top:20px
 }
@@ -109,25 +126,26 @@ input[type='text'], input[type='password'], textarea {
     float:left
 }
 
-#encrypt-wrap a{
-    color: #F65;
-}
-
-#decrypt-wrap a{
-    color: #132BD2;
-    height:43px
-}
-
 a#doPbkdf2, a#encrypt, a#decrypt{
     padding-top:0;
     background: url('../img/alpha-arrow.png') no-repeat bottom center;
 }
+
+#encrypt-wrap a{
+    color: #ee1111;
+}
+
 a#encrypt{
-    background-color: #F65;
+    background-color: #ee1111;
+}
+
+#decrypt-wrap a{
+    color: #2d89ef;
+    height:43px
 }
 
 a#decrypt{
-    background-color: #132BD2;
+    background-color: #2d89ef;
     transform: rotate(-180deg)
 }
 

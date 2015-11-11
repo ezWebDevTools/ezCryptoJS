@@ -14,12 +14,12 @@
   <h1 id=""back-to-top">ezCryptoJS</h1>
 
   <div class="header">
-    <p>A UI / UX remix of the demo from the Stanford Javascript Crypto Library.</p>
+    <p>A UI / UX remix of Stanford JavasScript Crypto Library (SJCL) demo.</p>
       <ul>
-          <li>Original Demo - <a href="http://bitwiseshiftleft.github.io/sjcl/demo/" target="_blank">http://bitwiseshiftleft.github.io/sjcl/demo/</a></li>
-          <li>Repo - <a href="https://github.com/bitwiseshiftleft/sjcl/" target="_blank">https://github.com/bitwiseshiftleft/sjcl/</a></li>
+          <li>SJCL Demo - <a href="http://bitwiseshiftleft.github.io/sjcl/demo/" target="_blank">http://bitwiseshiftleft.github.io/sjcl/demo/</a></li>
+          <li>SJCL Repo - <a href="https://github.com/bitwiseshiftleft/sjcl/" target="_blank">https://github.com/bitwiseshiftleft/sjcl/</a></li>
       </ul>
-  <p><a href="#more-options">More Options for SJCL</a></p>
+  <p><a href="#more-options">More Options</a></p>
   </div>
 
   <form id="theForm" onsubmit="return false;">
@@ -36,6 +36,17 @@
         </div>
       </div>
     </div>
+
+      <div id="padata" class="box">
+          <h2><label for="adata">Authenticated Data</label></h2>
+          <div class="section">
+              <input type="text" id="adata" class="wide" autocomplete="off" tabindex="3">
+              <div class="explanation">
+                  This auxilliary message isn't secret, but its integrity will be checked
+                  along with the integrity of the message.
+              </div>
+          </div>
+      </div>
 
     <!-- Password and pbkdf2 parameters -->
     <div id="ppassword" class="box" >
@@ -84,6 +95,7 @@
           <h2>More Options</h2>
           <div class="section">
 <p>These additional settings allow you to fine tune your encrypting.</p>
+              <p>Note: Some of the defaults have been changed from the original demo.</p>
               </div>
           </div>
 
@@ -225,22 +237,6 @@
       </div>
     </div>
   </div>
-  
-  <div class="column" id="ctexts">
-
-   
-      <div class="section">
-        <label for="adata">Authenticated data:</label>
-        <textarea id="adata" autocomplete="off" tabindex="3"></textarea>
-        <div class="explanation">
-          This auxilliary message isn't secret, but its integrity will be checked
-          along with the integrity of the message.
-        </div>
-      </div>
-    </div>
-    
-
-    
 
   </form>
 </body>
