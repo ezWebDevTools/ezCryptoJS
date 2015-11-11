@@ -1,0 +1,141 @@
+body{
+    max-width: 600px;
+    margin: 10px auto
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a[href="#more-options"] {
+    display: block;
+    padding-top: 20px;
+    font-weight:700;
+    text-align: center;
+}
+
+p{
+    padding: 2px 3%
+}
+
+ul{
+    padding: 2px 10%
+}
+
+li{
+    padding: 3px 0
+}
+
+h1{
+    color: #fff;
+    background-color:#000
+}
+
+h2{
+    margin:0 0 10px 0;
+    padding: 5px 0;
+    font-weight: 300
+}
+input[type='text'], input[type='password'], textarea {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+
+#pbuttons h2{
+    background-color: #444
+}
+
+#pciphertext h2{
+    background-color: #132BD2
+}
+
+
+#more-options h2{
+    background-color: #000
+}
+
+.header {
+    width: 100%
+}
+
+#theForm {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    font-size: 1.0em;
+}
+
+.column {
+    width: 100%;
+}
+
+#ctexts, #cmode {
+    position: relative;
+    left:0
+}
+
+.box{
+    border-radius:0;
+    border-width:  1px 0 0 0;
+    padding:5px 0 5px 0;
+    margin-top:20px
+}
+
+#ppassword, #pkey, #pmode, #pplaintext, #pciphertext {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0
+}
+
+.section{
+    width:94%;
+    margin: 0 auto
+}
+
+.explanation {
+    color: #555;
+    font-size: 0.9em
+}
+
+#buttons{
+    margin-top:0
+}
+
+#encrypt-wrap, #dencrypt-wrap{
+    width: 50%;
+    float:left
+}
+
+#encrypt-wrap a{
+    color: #F65;
+}
+
+#decrypt-wrap a{
+    color: #132BD2;
+    height:43px
+}
+
+a#doPbkdf2, a#encrypt, a#decrypt{
+    padding-top:0;
+    background: url('../img/alpha-arrow.png') no-repeat bottom center;
+}
+a#encrypt{
+    background-color: #F65;
+}
+
+a#decrypt{
+    background-color: #132BD2;
+    transform: rotate(-180deg)
+}
+
+.turnDown{
+    transform: rotate(0deg)
+}
+
+
+.clear{
+    clear:both
+}
