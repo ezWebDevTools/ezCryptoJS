@@ -1,18 +1,11 @@
 body{
     max-width: 600px;
-    margin: 10px auto
+    margin: 0 auto 10px
 }
 
 a{
     text-decoration: none;
     color: #000;
-}
-
-a[href="#more-options"] {
-    display: block;
-    padding-top: 20px;
-    font-weight:700;
-    text-align: center;
 }
 
 p{
@@ -29,18 +22,21 @@ li{
 
 h1{
     color: #fff;
-    background-color:#000
+    background-color:#000;
+    font-size:2.0em;
+    margin-bottom: 0.3em
 }
 
 h2{
+    font-size: 1.3em;
     margin:0 0 10px 0;
-    padding: 5px 0 5px 10px;
+    padding: 3px 0 3px 7px;
     font-weight: 300;
     text-align:left
 }
 
-h2:before{
-    content: '- ';
+input[type="radio"], input[type="checkbox"]{
+    margin-left:1em
 }
 input[type='text'], input[type='password'], textarea {
     border-radius: 0;
@@ -50,6 +46,10 @@ input[type='text'], input[type='password'], textarea {
 
 #pplaintext, #padata{
     border-color: #ee1111
+}
+
+#pfileinput h2{
+    background-color:#8926CA
 }
 
 #pplaintext h2, #padata h2{
@@ -65,17 +65,35 @@ input[type='text'], input[type='password'], textarea {
     background-color: #444
 }
 
-#pciphertext h2{
+#pciphertext h2, #save-text-as-file{
     background-color: #2d89ef
 }
 
+#save-text-as-file{
+    color:#fff;
+    margin:10px 0 0 0;
+    padding: 5px 15px;
+    display: inline-block;
+    float:right
+}
 
-#more-options h2{
+
+#more-options h2, #about h2{
     background-color: #000
 }
 
 .header {
-    width: 100%
+    width: 100%;
+    text-align:right
+}
+
+.header a{
+  padding:3px 12px
+}
+
+.header a:hover{
+    color:#fff;
+    background-color:#000
 }
 
 #theForm {
@@ -98,7 +116,7 @@ input[type='text'], input[type='password'], textarea {
     border-radius:0;
     border-width: 0;
     padding:5px 0 5px 0;
-    margin-top:20px
+    margin:0 0 10px 0
 }
 
 #ppassword, #pkey, #pmode, #pplaintext, #pciphertext {
@@ -112,6 +130,47 @@ input[type='text'], input[type='password'], textarea {
     margin: 0 auto
 }
 
+.section-50{
+    width: 50%;
+    float:left
+}
+
+#type-file, #drop-zone{
+    text-align: center;
+    padding:20px
+}
+
+#drop-zone{
+    color:#fff;
+    background-color: #8926CA;
+}
+
+.hover-drop{
+    opacity: .75;
+}
+
+#file-ask, #file-received, #file-process{
+    margin-top:1.0em
+}
+
+#file-received .file-name, #file-received .file-meta{
+    display:block
+}
+
+#file-received .file-name{
+    font-weight: bold;
+    margin-bottom:5px
+}
+
+#file-received .file-meta{
+    color: #555;
+    font-size: 0.9em;
+}
+
+#file-process .explanation{
+    padding-top:7px
+}
+
 .explanation {
     color: #555;
     font-size: 0.9em
@@ -121,10 +180,7 @@ input[type='text'], input[type='password'], textarea {
     margin-top:0
 }
 
-#encrypt-wrap, #dencrypt-wrap{
-    width: 50%;
-    float:left
-}
+
 
 a#doPbkdf2, a#encrypt, a#decrypt{
     padding-top:0;

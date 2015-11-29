@@ -15,7 +15,7 @@ function loaded() {
   document.getElementById("password").focus();
 }
 
-/* there's probaby a better way to tell the user something, but oh well */
+/* there's probably a better way to tell the user something, but oh well */
 function error(x) {
   alert(x);
 }
