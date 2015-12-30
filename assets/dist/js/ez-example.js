@@ -173,22 +173,35 @@ for (var i=0, iLen=processFile.length; i<iLen; i++) {
  * Use Javascript to save Textarea as a txt file
  * http://code.runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
  */
-function saveTextAsFile() {
-
+function saveTextAsFile(saveType) {
+	
 // grab the content of the form field and place it into a variable
     var textToWrite = document.getElementById("ciphertext").value;
     if (textToWrite == ''){
         alert ('Ciphertext is empty.')
         return;
     }
-//  create a new Blob (html5 magic) that conatins the data from your form feild
-    var textFileAsBlob = new Blob([textToWrite], {type: 'application/json'});
-// Specify the name of the file to be saved
+	
+	if (saveType == 'text'){
+		var fileExt = '.txt';
+		//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([textToWrite], {type: 'application/text'});
+		
+	} else {
+		var fileExt = '.json';
+		//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([textToWrite], {type: 'application/json'});
+	}
+
+
     var fileSuffix = '';
     if (window.thisFileProcess == 'plaintext'){
         fileSuffix = '-ezcryptojs';
     }
-    var fileNameToSaveAs = window.thisFile ? window.thisFile.name + fileSuffix + '.json': 'encrypted' + fileSuffix + '.json';
+	// strip the .ext from the thisFile.name (since it might change)
+	var fileNameNoExt = thisFile.name.substr(0, thisFile.name.lastIndexOf('.')) || thisFile.name;
+// Specify the name of the file to be saved
+    var fileNameToSaveAs = window.thisFile ? fileNameNoExt + fileSuffix + fileExt: 'encrypted' + fileSuffix + fileExt;
 
 // Optionally allow the user to choose a file name by providing
 // an imput field in the HTML and using the collected data here

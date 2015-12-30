@@ -65,16 +65,20 @@ input[type='text'], input[type='password'], textarea {
     background-color: #444
 }
 
-#pciphertext h2, #save-text-as-file{
+#pciphertext h2, .save-text-as-file{
     background-color: #2d89ef
 }
 
-#save-text-as-file{
+.save-text-as-file{
     color:#fff;
     margin:10px 0 0 0;
     padding: 5px 15px;
     display: inline-block;
     float:right
+}
+
+#save-text-as-file-json{
+	margin-left: 15px
 }
 
 
