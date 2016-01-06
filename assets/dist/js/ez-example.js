@@ -198,10 +198,15 @@ function saveTextAsFile(saveType) {
     if (window.thisFileProcess == 'plaintext'){
         fileSuffix = '-ezcryptojs';
     }
-	// strip the .ext from the thisFile.name (since it might change)
-	var fileNameNoExt = thisFile.name.substr(0, thisFile.name.lastIndexOf('.')) || thisFile.name;
+	
+	if (window.thisFile){
+		// strip the .ext from the thisFile.name (since it might change)
+		var fileNameNoExt = thisFile.name.substr(0, thisFile.name.lastIndexOf('.')) || thisFile.name;
+	} else {
+		var fileNameNoExt = 'ezCryptoJS';
+	}
 // Specify the name of the file to be saved
-    var fileNameToSaveAs = window.thisFile ? fileNameNoExt + fileSuffix + fileExt: 'encrypted' + fileSuffix + fileExt;
+    var fileNameToSaveAs =  ? fileNameNoExt + fileSuffix + fileExt: 'encrypted' + fileSuffix + fileExt;
 
 // Optionally allow the user to choose a file name by providing
 // an imput field in the HTML and using the collected data here
