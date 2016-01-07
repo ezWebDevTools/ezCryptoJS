@@ -80,7 +80,6 @@ function handleFileSelect(evt) {
     }
     document.getElementById('file-received').innerHTML =  output.join('');
     window.thisFile = files[0];
-    console.log(window.thisFile);
     toggleDivs('file-received');
 }
 
@@ -206,7 +205,7 @@ function saveTextAsFile(saveType) {
 		var fileNameNoExt = 'ezCryptoJS';
 	}
 // Specify the name of the file to be saved
-    var fileNameToSaveAs =  ? fileNameNoExt + fileSuffix + fileExt: 'encrypted' + fileSuffix + fileExt;
+    var fileNameToSaveAs =  fileNameNoExt + fileSuffix + fileExt;
 
 // Optionally allow the user to choose a file name by providing
 // an imput field in the HTML and using the collected data here
